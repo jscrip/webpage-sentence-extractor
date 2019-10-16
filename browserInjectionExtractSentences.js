@@ -1,9 +1,10 @@
 (() => {
 var settings = {
 	minWordCount: 4,
-	minLength: 10
+	minLength: 10,
+	cssQuery:"body"
 };
-var sentences = document.querySelector("body")
+var sentences = document.querySelector(cssQuery)
 	.innerText.replace(/[\n\r\t]+/gim,"[punct]")
 	.replace(/!+\?+|\?+!+/gim,"!?[punct]")
 	.replace(/!+/gim,"![punct]")
